@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://yuttts.github.io">
-  <title>Hexo</title>
+  <title>Spring MVC 5.2.5官方文档 阅读笔记 | Hexo</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="title: Springdate: 2020-07-22 15:12:36 Spring MVC 5.2.5官方文档 阅读笔记 官方文档https:&#x2F;&#x2F;docs.spring.io&#x2F;spring&#x2F;docs&#x2F;current&#x2F;spring-framework-reference&#x2F;web.html#mvc-controller  控制器(Controller)的实现 控制器是应用程序逻辑的处理入口，主">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://yuttts.github.io/Spring/Spring%20MVC5.2.5%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3-%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0.html">
+  <meta name="description" content="Spring MVC 5.2.5官方文档 阅读笔记 官方文档https:&#x2F;&#x2F;docs.spring.io&#x2F;spring&#x2F;docs&#x2F;current&#x2F;spring-framework-reference&#x2F;web.html#mvc-controller  控制器(Controller)的实现 控制器是应用程序逻辑的处理入口，主要负责去调用service层已经实现的服务。 工作流程：控制器接收到用户请求并">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring MVC 5.2.5官方文档 阅读笔记">
+<meta property="og:url" content="https://yuttts.github.io/2020/07/22/Spring%20MVC5.2.5%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3-%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="title: Springdate: 2020-07-22 15:12:36 Spring MVC 5.2.5官方文档 阅读笔记 官方文档https:&#x2F;&#x2F;docs.spring.io&#x2F;spring&#x2F;docs&#x2F;current&#x2F;spring-framework-reference&#x2F;web.html#mvc-controller  控制器(Controller)的实现 控制器是应用程序逻辑的处理入口，主">
-<meta property="article:published_time" content="2020-07-22T11:00:12.978Z">
-<meta property="article:modified_time" content="2020-07-22T11:00:12.978Z">
+<meta property="og:description" content="Spring MVC 5.2.5官方文档 阅读笔记 官方文档https:&#x2F;&#x2F;docs.spring.io&#x2F;spring&#x2F;docs&#x2F;current&#x2F;spring-framework-reference&#x2F;web.html#mvc-controller  控制器(Controller)的实现 控制器是应用程序逻辑的处理入口，主要负责去调用service层已经实现的服务。 工作流程：控制器接收到用户请求并">
+<meta property="article:published_time" content="2020-07-22T11:42:31.519Z">
+<meta property="article:modified_time" content="2020-07-22T11:44:55.438Z">
 <meta property="article:author" content="Yuttts">
+<meta property="article:tag" content="SpringMVC">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -58,11 +59,11 @@
       
 
 
-<div class="overlay" style="background: #4d4d4d;"></div>
+<div class="overlay" style="background: #4d4d4d;background: url('/img/biubiubiu.gif') no-repeat ;"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/img/head.jpg" class="js-avatar">
+			<img src="/img/fbb.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 			<h1 class="header-author"><a href="/">Yuttts</a></h1>
@@ -75,6 +76,10 @@
 				<li><a href="/" target="_blank">主页</a></li>
 			
 				<li><a href="/Spring" target="_blank">Spring</a></li>
+			
+				<li><a href="/tags" target="_blank">标签</a></li>
+			
+				<li><a href="/categories" target="_blank">分类</a></li>
 			
 			</ul>
 		</nav>
@@ -125,7 +130,7 @@
 		<header id="header" class="inner">
 			<div class="profilepic">
 				<a href="/">
-					<img src="/img/head.jpg" class="js-avatar">
+					<img src="/img/fbb.jpg" class="js-avatar">
 				</a>
 			</div>
 			<hgroup>
@@ -133,6 +138,10 @@
 			</hgroup>
 			
 			
+			
+				
+			
+				
 			
 				
 			
@@ -151,12 +160,16 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/Spring">Spring</a></li>
+					<li style="width: 25%"><a href="/Spring">Spring</a></li>
+		        
+					<li style="width: 25%"><a href="/tags">标签</a></li>
+		        
+					<li style="width: 25%"><a href="/categories">分类</a></li>
 		        
 				</ul>
 			</nav>
@@ -172,13 +185,60 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-Spring MVC5.2.5官方文档-阅读笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+  
+  
+    <h1 class="article-title" itemprop="name">
+      Spring MVC 5.2.5官方文档 阅读笔记
+    </h1>
+  
+
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/07/22/Spring%20MVC5.2.5%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3-%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+        <time datetime="2020-07-22T11:42:31.519Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-22</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">11.1k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">46分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
   <div class="article-entry" itemprop="articleBody">
     
-    <p>title: Spring<br>date: 2020-07-22 15:12:36</p>
-<h1 id="Spring-MVC-5-2-5官方文档-阅读笔记"><a href="#Spring-MVC-5-2-5官方文档-阅读笔记" class="headerlink" title="Spring MVC 5.2.5官方文档 阅读笔记"></a>Spring MVC 5.2.5官方文档 阅读笔记</h1><blockquote>
+    <h1 id="Spring-MVC-5-2-5官方文档-阅读笔记"><a href="#Spring-MVC-5-2-5官方文档-阅读笔记" class="headerlink" title="Spring MVC 5.2.5官方文档 阅读笔记"></a>Spring MVC 5.2.5官方文档 阅读笔记</h1><blockquote>
 <p>官方文档<a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#mvc-controller" target="_blank" rel="noopener">https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#mvc-controller</a></p>
 </blockquote>
 <h2 id="控制器-Controller-的实现"><a href="#控制器-Controller-的实现" class="headerlink" title="控制器(Controller)的实现"></a>控制器(Controller)的实现</h2><blockquote>
@@ -840,38 +900,6 @@
     
 
     
-    <div class="page-reward">
-      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
-        <div class="tooltip tooltip-east">
-          <span class="tooltip-item">
-            赏
-          </span>
-          <span class="tooltip-content">
-            <span class="tooltip-text">
-              <span class="tooltip-inner">
-                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
-                    class="icon icon-quo-right"></i></p>
-                <div class="reward-box">
-                  
-                  <div class="reward-box-item">
-                    <img class="reward-img" src="/img/alipay.jpg">
-                    <span class="reward-type">支付宝</span>
-                  </div>
-                  
-                  
-                  <div class="reward-box-item">
-                    <img class="reward-img" src="/img/weixin.png">
-                    <span class="reward-type">微信</span>
-                  </div>
-                  
-                </div>
-              </span>
-            </span>
-          </span>
-        </div>
-      </a>
-    </div>
-    
 
     
     <div class="declare"> 
@@ -882,7 +910,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://yuttts.github.io/Spring/Spring MVC5.2.5官方文档-阅读笔记.html" title="" target="_blank">https://yuttts.github.io/Spring/Spring MVC5.2.5官方文档-阅读笔记.html</a>
+          <a href="https://yuttts.github.io/2020/07/22/Spring MVC5.2.5官方文档-阅读笔记/" title="Spring MVC 5.2.5官方文档 阅读笔记" target="_blank">https://yuttts.github.io/2020/07/22/Spring MVC5.2.5官方文档-阅读笔记/</a>
         </li>
         
         <li>
@@ -899,7 +927,29 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SpringMVC</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Spring//" class="article-tag-list-link color2">Spring</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
     
 
@@ -949,7 +999,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAAEmCAAAAADqr2IGAAAEiUlEQVR42u3ay46jQAwF0Pz/T/dsZ9QTcm2DhMlh1VITqDosyq/XK75+gqv3q79/++457575+1dnvaV5YcKECROmWzLlj/79guPXHy/o+C3V7U3ujD48JkyYMGFazjR5cQ8u/yTJM5Mn5/vChAkTJkyYjpPe3q/yECEPGvIPgAkTJkyYMCUbTo7h60rPeW0WEyZMmDB9G1P+uLzpONlM8t/ex7u8Fo4JEyZMmG7GNCndbv/7dUWEggkTJkyYbsP0U7x6BdlJa7PXwpzv9J+nYcKECROmtUzVVDaB6LUPk/f2EuZJ6o4JEyZMmJ7BlBzP1YXmxdZq+XVSGu7tAhMmTJgwPYlp8uJJ2tkLKc465gvtTEyYMGHCtIqpN8iSj7Ycb6laZq0e7ROsV6+ejQkTJkyYbsaUP2heZk3S7LzNWV3hPKzBhAkTJkzbmfJjMnl0b3sTlEkokxNjwoQJE6ZdTHnBtJqm5tuuFmd7CXDeKI06vZgwYcKEaSFT9QW95mJvA8lBPkmzPwQNmDBhwoRpOdOkmNtLXKuDoecmutUACBMmTJgw7WXKW5Lz1ua55dpzA4JobZgwYcKEaSFTtXjaK9FWB0nPDQgm47PNGjMmTJgwYboN06RVWR0GnZR0e+3MAkHwX0yYMGHCtJepems+iJOXbvMScPKBJ084IaLBhAkTJkw3Y8oHWZJDehJq9A7+CWXhmZgwYcKEaSFTUk7tpbvJyE41QDlmra6zcD8mTJgwYVrLlGymNzRT3d6koFxtajb3hQkTJkyYFjL1moJ54zA/mHvoefo9WTMmTJgwYdrLlI+55AntZOnVz9Y7+Jtla0yYMGHCtJapeuXLTT5Ar8h7XWH3BCBMmDBhwnRLpqtTyupX6gUHvYJyIRnGhAkTJkyPY8q30WtY9kZ/8jX3wpfmJBEmTJgwYboxU54KJodr7/jPA4JJmj1pjmLChAkTpicx9UZnzk198wZqtR17SRUcEyZMmDDdjKma4k7GX6qDNZOS7iRR/889mDBhwoRpLVOSRuYJZ3UUZnLAV4OJSWKPCRMmTJj2MvUO7OqYziRcOKuNOlkzJkyYMGF6BtMkoc23NAkjqmHK8aoKAQQmTJgwYVrONC/OTtLRCeJZIUjUzsSECRMmTGuZeu3A655QTVMTvt7aMGHChAnTM5iS5DNv/k3ah3mCGh3kcRM0amdiwoQJE6blTPkr87GbedE2/0i98CL62JgwYcKE6RFM1ZGdSXOxFzpUy77Vt38Y3MGECRMmTAuZegnqfNznVbzylmq1Odr8SJgwYcKEaQnTT/GaDOXkKWuekPdaleWPigkTJkyY1jJNjsmzktJ8w5NxnN67Xr3IBRMmTJgw3Yyp1zisHreTlmf1eO4l6lFFHBMmTJgwrWWqjunkpdjkzvz4n6e+zeIyJkyYMGH6GqZ8BOf4/nyYphqITIDe0mPChAkTpi9jyjffa22eVRSuon+YacKECRMmTGuZkiJvddglHwYql1zHoUm+d0yYMGHCtJ1p0iCspsT5Vqsjrb1kOG/cYsKECROmhUx/AIoZgtPUObatAAAAAElFTkSuQmCC" alt="微信分享二维码"> -->
+     <!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAAEmCAAAAADqr2IGAAAEiElEQVR42u3aS27cQAwFQN//0sk2i4zmPVKG1ePSykBGUncpAD/Nr6/4+nN5/fub6yfkfycrefWEzTpXFyZMmDBheiRT/uhXL7hexAZi/xmSX17vHRMmTJgwfQZTG8LzK19oHvJz1tlnw4QJEyZMmPJ/vS5ck7J29jHalWPChAkTJkx5oM1p2pZukgokhT0mTJgwYfptTPnjikfHv0nK183BZPt8TJgwYcL0SUz5az7v75svTJgwYcL0MKa7DiZnC7oOzO1n+74LEyZMmDCdy9SWrG1pOmvLJgXz5miz3S8mTJgwYTqX6a727iZRyDecYM2a16u8CRMmTJgwPZhp09jNX9CO+Gy4Z33ab+x/Y8KECROmxzBtIGZB+rocTYL3vU3eqDjHhAkTJkwHMuUhfNNIbUvoa8r9gWudsmDChAkTpgOZ2gCZbGAf5jcba58TleKYMGHChOlYpuQ1eUIww82TjPzeNoEo2r6YMGHChOkopraITUJpsvRZWduW03lCsJrhxYQJEyZMD2batF+vg31boOZjQ22hm9/1BhQTJkyYMB3OlG91VpRuAvM+IchL5ZfPxIQJEyZMhzPNBkzzu6Ly8tbDy3YwqC59MWHChAnT45ny8nUYRBdLbD9G3jK+rb2LCRMmTJgez5QXum1Lt23CfkdZ27JGk02YMGHChOlApnzMpR24yYNu/t7Zsei+PMaECRMmTOcytTfvU4Sv0dUO6Lz5f9EmB5gwYcKE6XCmvOXaHk9ukom8nG6L6iQBwoQJEyZMpzPlrdW8+buBbsN5Uta27/rPXjBhwoQJ07FMm5GXFjRZ+n4Nm2POaAgJEyZMmDAdxTRrhm4OOzeN1zYJmLWt69IXEyZMmDAdyNQua9/8be/NS9Z9WoAJEyZMmD6JaXOKNys421Rj3+RtR5EwYcKECdPpTLNmbptAbMZ6NvMz+Sd5uWZMmDBhwvQRTG3InAXXuxq7Odxs/Cjr/mLChAkTpqcz5WGybbO2LeDZ5tsj1U1igQkTJkyYTmTaDLjMQuz+7zalyA8+X+4CEyZMmDAdy7Q/Stxv4K7RnNnzoyYvJkyYMGE6lmmzxPxo86u88pJ49tnqkVlMmDBhwnQsU/v62SHipt+cv71tGdfHpZgwYcKE6Vim2WbapbRlcF7cJpvfNKAxYcKECdNnMLVhMqdpN5OsIQ/k7RjQm2oXEyZMmDAdxZTfcMN3GB0ltuexs8bum99jwoQJE6aPYGrHa/Kge1djd4OYF+rFQSYmTJgwYXo802ZoZv+bZEFt6bsfG7p5tggTJkyYMP0o0yzEtiMvbYN4VmC3688PXDFhwoQJ07lM+5h417hP/hnaknuzwttSB0yYMGHC9KNMbRJQHwfeNIKTfMIct24HY8KECROmw5nyILrphV4XwG0Jmo/y5Ot/+UZMmDBhwvRrmPJlJUCbUjZ5cjswdFtCgAkTJkyYjmVKONpDylnzd5+sFAecmDBhwoTpcKb9gzbjNZvW8CxNyfeOCRMmTJhOZ9q3WTfzQcnHyNORvLi96+AWEyZMmDA9mOkvmSNOz3IzEv4AAAAASUVORK5CYII=" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -961,6 +1011,16 @@
   </div>
 </article>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/22/%E6%B5%8B%E8%AF%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">测试</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 <aside class="wrap-side-operation">
@@ -1030,7 +1090,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
@@ -1116,6 +1176,10 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SpringMVC</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -1288,6 +1352,56 @@
   
   <!-- <script async type="text/javascript" size="90" alpha="0.2" zIndex="0" src="/plugins/ribbon.js/ribbon.min.js"></script> -->
   
+  
+    <script type="text/javascript" src="/plugins/live2d-widget.js/L2Dwidget.min.js"></script>
+<script type="text/javascript">
+  /**
+   * 完整配置请参考：https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init
+   */
+  var pluginModelPath = "assets/", // 模型的文件路径，无需更改
+    pluginRootPath = "/live2d_models/"; // 插件的路径，无需更改
+  //特定的模型json文件名称
+  var modelPathJson = {
+    "epsilon2_1": "Epsilon2.1",
+    "gf": "Gantzert_Felixander",
+    "haru/01": "haru01",
+    "haru/02": "haru02",
+    "nietzsche": "nietzche"
+  }
+
+  
+    var modelName = "hibiki";
+  
+
+  var modelJsonPath = "";
+  if (modelPathJson[modelName]) {
+    modelJsonPath = pluginRootPath + modelName + "/" + pluginModelPath + modelPathJson[modelName] +
+      ".model.json";
+  } else {
+    modelJsonPath = pluginRootPath + modelName + "/" + pluginModelPath + modelName + ".model.json";
+  }
+  L2Dwidget.init({
+    model: {
+      jsonPath: modelJsonPath
+    },
+    display: {
+       position: "right", 
+       width: 145, 
+       height: 315, 
+       hOffset: 50, 
+      
+    },
+    mobile: {
+       show: false, 
+       scale: 0.6 
+    },
+    react: {
+       opacity: 0.8 
+    }
+  })
+
+</script>
+
   
   
 </body>

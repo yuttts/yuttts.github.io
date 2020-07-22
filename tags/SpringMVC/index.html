@@ -6,18 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://yuttts.github.io">
-  <title>7-构造方法与参数传递 | Hexo</title>
+  <title>Tag: SpringMVC | Hexo</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="4、构造方法1.关于java类中的构造方法：①构造方法又被称为构造函数&#x2F;构造器&#x2F;Constructor②—构造方法语法结构：[修饰符列表] 构造方法名（形参列表）｛构造方法体；｝—对比普通方法的语法结构：[修饰符列表] 返回值类型 构造方法名（形参列表）｛方法体；｝PS：对于构造方法来说，“返回值类型”不需要指定，并且也不能写void，只要写上了void，那么这个方法就变成普通方法了。③对于构造方">
-<meta property="og:type" content="article">
-<meta property="og:title" content="7-构造方法与参数传递">
-<meta property="og:url" content="https://yuttts.github.io/2019/12/22/7-%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E4%B8%8E%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://yuttts.github.io/tags/SpringMVC/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="4、构造方法1.关于java类中的构造方法：①构造方法又被称为构造函数&#x2F;构造器&#x2F;Constructor②—构造方法语法结构：[修饰符列表] 构造方法名（形参列表）｛构造方法体；｝—对比普通方法的语法结构：[修饰符列表] 返回值类型 构造方法名（形参列表）｛方法体；｝PS：对于构造方法来说，“返回值类型”不需要指定，并且也不能写void，只要写上了void，那么这个方法就变成普通方法了。③对于构造方">
-<meta property="article:published_time" content="2019-12-22T10:39:48.000Z">
-<meta property="article:modified_time" content="2019-12-22T10:43:32.000Z">
 <meta property="article:author" content="Yuttts">
 <meta name="twitter:card" content="summary">
   
@@ -184,240 +180,76 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-7-构造方法与参数传递" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-      <header class="article-header">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	
+<a href="/2020/07/22/Spring%20MVC5.2.5%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3-%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+        <time datetime="2020-07-22T11:42:31.519Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-22</time>
+</a>
+
+        </div>
+    	 
   
+    <h1 itemprop="name">
+	
+	  <a class="archive-article-title" href="/2020/07/22/Spring%20MVC5.2.5%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3-%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" target="_blank">Spring MVC 5.2.5官方文档 阅读笔记</a>
   
-    <h1 class="article-title" itemprop="name">
-      7-构造方法与参数传递
     </h1>
   
 
 
-  
-  
-        
-        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
-        </span>
-
-<a href="/2019/12/22/7-%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E4%B8%8E%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/" class="archive-article-date">
-        <time datetime="2019-12-22T10:39:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-22</time>
-</a>
-
-  
-  
-    
-<div style="margin-top:10px;">
-  <span class="post-time">
-    <span class="post-meta-item-icon">
-      <!-- fonts.scss -->
-      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
-      <i class="icon-statistics"></i>
-      <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">1.2k字</span>
-    </span>
-  </span>
-
-  <span class="post-time">
-    &nbsp; | &nbsp;
-    <span class="post-meta-item-icon">
-      <i class="icon-book icon"></i>
-      <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">4分</span>
-    </span>
-  </span>
-</div>
-
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>4、构造方法<br>1.关于java类中的构造方法：<br>①构造方法又被称为构造函数/构造器/Constructor<br>②<br>—构造方法语法结构：<br>[修饰符列表] 构造方法名（形参列表）｛<br>构造方法体；<br>｝<br>—对比普通方法的语法结构：<br>[修饰符列表] 返回值类型 构造方法名（形参列表）｛<br>方法体；<br>｝<br>PS：对于构造方法来说，“返回值类型”不需要指定，并且也不能写void，只要写上了void，那么这个方法就变成普通方法了。<br>③对于构造方法，其方法名必须和类名保持一致。<br>④构造方法的作用？<br>—通过构造方法的调用，可以创建对象<br>⑦构造方法的调用：new 构造方法名（实参列表）；<br>—普通方法的调用：类名.方法名（实参列表）；或 引用.方法名(实参列表）：<br>⑧构造方法调用执行之后，有返回值吗？<br>——每一个构造方法实际上执行结束之后都有返回值，但是这个“return 值；”这样的语句不需要写。构造方法结束时java程序自动返回值，并且返回值的类型是构造方法所在类的类型。由于构造方法返回值的类型就是类本身，所以返回值类型不需要编写。<br>⑨当一个类中没有定义任何的构造方法，系统默认给该类提供一个无参数的构造方法，这个构造方法被称为缺省构造器。<br>—当一个类中有定义任何的构造方法，系统不再为这个类提供缺省构造器。建议开发中手动为当前类提供无参数构造方法。<br>⑩构造方法支持重载机制。在一个类中编写多个构造方法，构成方法重载机制。<br>2.构造方法的作用<br>（1）创建对象<br>（2）创建对象的同时，初始化实例变量的内存空间（赋值）<br>3.成员变量之实例变量，属于对象级别的变量，这种变量必须先有对象才能有实例变量。<br>4.实例变量在没有手动赋值的时候，系统默认赋值，那么这个系统默认赋值是在什么时候完成的呢？<br>—是在类加载的时候吗？不是，因为类加载的时候只加载了代码片段，还没来得及创建对象，所以此时实例变量并没有初始化。<br>—实际上，实例变量的内存空间是在构造方法执行过程中完成开辟的，完成初始化的。<br>—系统在默认赋值的时候，也是在构造方法执行过程中完成的赋值。</p>
-<p>单行注释：ctrl+/  多行注释：ctrl+shift+/<br>查看访问的方法：按ctrl并移动到查看元素上，出现下划线时单击。<br>查看含有多个元素的类：在当前类中使用ctrl+o快捷键，然后输入查找的元素名称。</p>
-<hr>
-<p>5、对象和引用：</p>
-<pre><code>5.1、对象和引用的概念？
-    * 对象：目前在使用new运算符在堆内存中开辟的内存空间称为对象。
-    * 引用：是一个变量，不一定是局部变量，还可能是成员变量。引用保存了内存地址，指向了堆内存当中的对象。
-    * 所有访问实例相关的数据，都需要通过“引用.”的方式访问，因为只有通过引用才能找到对象。
-    * 只有一个空的引用，访问对象的实例相关的数据会出现空指针异常。
-
-    class Student{
-
-        Computer com; //com是一个引用【实例变量】
-
-        public static void doSome(){
-            Computer cc; //cc是一个引用【局部变量】
-        }
-    }
-
-5.2、参数的传递？——值传递 or 内容物（值或地址）的传递
-    主要研究和学习的是方法在调用的时候，涉及到参数传递的问题，到底是怎么传递数据的呢？
-
-        int i = 10;
-        int j = i; //i传递给j，实际上只是将i变量中保存的10传递给j了，j实际上是一块全新的内存空间。
-
-        User u = 0x1234;
-        User u2 = u; //u传递给u2，实际上是将0x1234这个值赋值给u2了，u和u2实际上是两个不同的局部变量，
-                         //但是它们这两个变量指向堆内存中同一个java对象。</code></pre><p>public class Constructor01 {</p>
-<pre><code>public static void main(String[] args) {
-    User1 u= new User1(20);
- System.out.println(&quot;main1--&gt;&quot;+u.age);//20
-    add(u);
-    System.out.println(&quot;main2--&gt;&quot;+u.age);//21
-
-}
-public static void add(User1 u) {
-    u.age++;
-    System.out.println(&quot;add--&gt;&quot;+u.age);//21
-
-}</code></pre><p>}<br>class User1{<br>        int age;<br>        public User1(int u){<br>            age=u;<br>    }<br>}<br>—————————————————————————————2019.12.22学习“构造方法”、“参数传递”。<br>脑壳晕：有空再来复习</p>
-
-    
-
-    
-
-    
-    <div class="declare"> 
-      <ul class="post-copyright">
-        <li>
-          <strong>本文作者：</strong>
-          Yuttts
-        </li>
-        <li>
-          <strong>本文链接：</strong>
-          <a href="https://yuttts.github.io/2019/12/22/7-构造方法与参数传递/" title="7-构造方法与参数传递" target="_blank">https://yuttts.github.io/2019/12/22/7-构造方法与参数传递/</a>
-        </li>
-        
-        <li>
-          <strong>版权声明： </strong>
+        <div class="article-info info-on-right">
           
-          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
-        </li>
-        
-      </ul>
-    </div>
-    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SpringMVC</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
+          
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Spring//" class="article-tag-list-link color2">Spring</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-    
 
-    
-    
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a> -->
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-     <!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAAD60lEQVR42u3aS3IbMQwFQN3/0k5VVnFJmrwHcGQvelYuSeGQzQWCz+MRP19/n+dP/v38+TfXK+RveffL57fn+1k9OHDgwIEj2MS753np52/frZMcOz9Y8t58hbf7xIEDBw4chziSTeebyLeegLY7nK2AAwcOHDg+z5EHvzwxS9DznCu/Thw4cODA8Rs48mA5S+3Opos4cODAgeNnOZLiYFKG26+Zr5M8N9ZKceDAgQNHGukebdD9/X/fON+BAwcOHDjWYaxNkGbB+9RVFefCgQMHDhxrjqTYty/htYecpXZtw6zuYuHAgQMHjmAn7TDc7ABtSN6Azk707f8dOHDgwIFjwXHqYMkLZi2r2WGOlQ5x4MCBA0fJMSyfBYdMCK7vJ3nvpnn24i04cODAgWPN0Zb59q2j5Jc57iwt/E/QxYEDBw4cC47k2JuO1h2DETlTHZ5x4MCBA8dRjvzYd2wu/ztPMuuSJQ4cOHDgOMSRv35Gsxlu+FCIbe8ZBw4cOHCMGjN5u6jlOIu4GZLAgQMHDhxnOZI20qyX9cmC4KZN9aL/hgMHDhw4Fhx54rQp6s1Ke5tQml9GFHRx4MCBA0fMkSRmZ7cyG2Wbjb7VKSIOHDhw4LiBI2/hzPj26ycxMS+Dvh1owIEDBw4cC468UFi/oOzpJOXC1YGvU0QcOHDgwLHm2BT+ZqMPm5bVLOVbEePAgQMHjhHH7GB3DD3kQxWbwH8NhwMHDhw47uNoxwtWyVLZlDqV2hXxHwcOHDhwlBz75C0Pz/sCX7LycMQBBw4cOHCsOfJC26ZglyO2QT2/gGFTDQcOHDhwjDiGQSgu57WtoFnAbguLq1EGHDhw4MBxmbzlYwr7elr+b9tCYX6uF9/iwIEDB45DHHkS1bZw8mGINtLl6xctKxw4cODAcaj7f2p04Pp4ZwcjZqlmdBYcOHDgwHGUI2/z5AfLG1qzcuThUiMOHDhw4DjUtWmD3IzjGqVNC9srLFprOHDgwIHjI338WfkvT/PyJDBvjyUXjAMHDhw4TnFs2jzt1tuSXzsScYAJBw4cOHAc4pgNK7RjDe3YRJ2DLhpRL0blcODAgQPHiONsmpS3f86OKbSlzKI4iAMHDhw4yrd8lU+SmM1C6Sbkb1LHb9/iwIEDB441xywsnQqTeVGvHVbI1xyGahw4cODAccnRDpa17Z8kfM5Wy8PzgfkOHDhw4MBRcrSBMOfbDDTMhi3aJhkOHDhw4PhZjlmwLDa0+GQTbnHgwIEDx+c5NmPZybf7y9hcCQ4cOHDgOMuxOdj+AG0JLwnVw/EFHDhw4MCx5jg7ptAmbG2A3BxvU7LEgQMHDhwBxx+l9z4QwV+WVAAAAABJRU5ErkJggg==" alt="微信分享二维码"> -->
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-
-    
-    <div class="clearfix"></div>
-  </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-<nav id="article-nav">
-  
-    <a href="/2020/07/22/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Hello World
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/12/19/6%20java%E5%9F%BA%E7%A1%80-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">java基础-类与对象</div>
-      <i class="icon-circle-right"></i>
-    </a>
+    </div></section>
   
-</nav>
 
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 
           </div>
@@ -458,9 +290,9 @@ public static void add(User1 u) {
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
