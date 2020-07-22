@@ -64,6 +64,46 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-测试" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/22/%E6%B5%8B%E8%AF%95/" class="article-date">
+  <time datetime="2020-07-22T07:05:33.000Z" itemprop="datePublished">2020-07-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/22/%E6%B5%8B%E8%AF%95/">测试</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/22/%E6%B5%8B%E8%AF%95/" data-id="ckcx0x8fx0000m0vm7n5n67db" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/07/22/hello-world/" class="article-date">
@@ -113,6 +153,551 @@
 
 
   
+    <article id="post-7-构造方法与参数传递" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/22/7-%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E4%B8%8E%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/" class="article-date">
+  <time datetime="2019-12-22T10:39:48.000Z" itemprop="datePublished">2019-12-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/22/7-%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E4%B8%8E%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/">7-构造方法与参数传递</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>4、构造方法<br>1.关于java类中的构造方法：<br>①构造方法又被称为构造函数/构造器/Constructor<br>②<br>—构造方法语法结构：<br>[修饰符列表] 构造方法名（形参列表）｛<br>构造方法体；<br>｝<br>—对比普通方法的语法结构：<br>[修饰符列表] 返回值类型 构造方法名（形参列表）｛<br>方法体；<br>｝<br>PS：对于构造方法来说，“返回值类型”不需要指定，并且也不能写void，只要写上了void，那么这个方法就变成普通方法了。<br>③对于构造方法，其方法名必须和类名保持一致。<br>④构造方法的作用？<br>—通过构造方法的调用，可以创建对象<br>⑦构造方法的调用：new 构造方法名（实参列表）；<br>—普通方法的调用：类名.方法名（实参列表）；或 引用.方法名(实参列表）：<br>⑧构造方法调用执行之后，有返回值吗？<br>——每一个构造方法实际上执行结束之后都有返回值，但是这个“return 值；”这样的语句不需要写。构造方法结束时java程序自动返回值，并且返回值的类型是构造方法所在类的类型。由于构造方法返回值的类型就是类本身，所以返回值类型不需要编写。<br>⑨当一个类中没有定义任何的构造方法，系统默认给该类提供一个无参数的构造方法，这个构造方法被称为缺省构造器。<br>—当一个类中有定义任何的构造方法，系统不再为这个类提供缺省构造器。建议开发中手动为当前类提供无参数构造方法。<br>⑩构造方法支持重载机制。在一个类中编写多个构造方法，构成方法重载机制。<br>2.构造方法的作用<br>（1）创建对象<br>（2）创建对象的同时，初始化实例变量的内存空间（赋值）<br>3.成员变量之实例变量，属于对象级别的变量，这种变量必须先有对象才能有实例变量。<br>4.实例变量在没有手动赋值的时候，系统默认赋值，那么这个系统默认赋值是在什么时候完成的呢？<br>—是在类加载的时候吗？不是，因为类加载的时候只加载了代码片段，还没来得及创建对象，所以此时实例变量并没有初始化。<br>—实际上，实例变量的内存空间是在构造方法执行过程中完成开辟的，完成初始化的。<br>—系统在默认赋值的时候，也是在构造方法执行过程中完成的赋值。</p>
+<p>单行注释：ctrl+/  多行注释：ctrl+shift+/<br>查看访问的方法：按ctrl并移动到查看元素上，出现下划线时单击。<br>查看含有多个元素的类：在当前类中使用ctrl+o快捷键，然后输入查找的元素名称。</p>
+<hr>
+<p>5、对象和引用：</p>
+<pre><code>5.1、对象和引用的概念？
+    * 对象：目前在使用new运算符在堆内存中开辟的内存空间称为对象。
+    * 引用：是一个变量，不一定是局部变量，还可能是成员变量。引用保存了内存地址，指向了堆内存当中的对象。
+    * 所有访问实例相关的数据，都需要通过“引用.”的方式访问，因为只有通过引用才能找到对象。
+    * 只有一个空的引用，访问对象的实例相关的数据会出现空指针异常。
+
+    class Student{
+
+        Computer com; //com是一个引用【实例变量】
+
+        public static void doSome(){
+            Computer cc; //cc是一个引用【局部变量】
+        }
+    }
+
+5.2、参数的传递？——值传递 or 内容物（值或地址）的传递
+    主要研究和学习的是方法在调用的时候，涉及到参数传递的问题，到底是怎么传递数据的呢？
+
+        int i = 10;
+        int j = i; //i传递给j，实际上只是将i变量中保存的10传递给j了，j实际上是一块全新的内存空间。
+
+        User u = 0x1234;
+        User u2 = u; //u传递给u2，实际上是将0x1234这个值赋值给u2了，u和u2实际上是两个不同的局部变量，
+                         //但是它们这两个变量指向堆内存中同一个java对象。</code></pre><p>public class Constructor01 {</p>
+<pre><code>public static void main(String[] args) {
+    User1 u= new User1(20);
+ System.out.println(&quot;main1--&gt;&quot;+u.age);//20
+    add(u);
+    System.out.println(&quot;main2--&gt;&quot;+u.age);//21
+
+}
+public static void add(User1 u) {
+    u.age++;
+    System.out.println(&quot;add--&gt;&quot;+u.age);//21
+
+}</code></pre><p>}<br>class User1{<br>        int age;<br>        public User1(int u){<br>            age=u;<br>    }<br>}<br>—————————————————————————————2019.12.22学习“构造方法”、“参数传递”。<br>脑壳晕：有空再来复习</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/22/7-%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E4%B8%8E%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/" data-id="ckcwt7xmc000738vm9nk9cmlg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-6 java基础-类与对象" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/19/6%20java%E5%9F%BA%E7%A1%80-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/" class="article-date">
+  <time datetime="2019-12-19T14:45:39.000Z" itemprop="datePublished">2019-12-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/19/6%20java%E5%9F%BA%E7%A1%80-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/">java基础-类与对象</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第三章：面向对象【Java语言的核心机制，最重要的内容，Java语言的特色】</p>
+<p>1.* 面向过程和面向对象的区别</p>
+<p>（1）- 面向过程：<br>主要关注点是：实现的具体过程，因果关系【集成显卡的开发思路】</p>
+<pre><code>* 优点：对于业务逻辑比较简单的程序，可以达到快速开发，前期投入成本较低。
+
+* 缺点：采用面向过程的方式开发很难解决非常复杂的业务逻辑，另外面向过程的方式导致软件元素之间的“耦合度”非常高，只要其中一环出问题，整个系统受到影响，</code></pre><p>导致最终的软件“扩展力”差。另外，由于没有独立体的概念，所以无法达到组件复用。</p>
+<p>（2）- 面向对象：<br>主要关注点是：主要关注对象【独立体】能完成哪些功能。【独立显卡的开发思路】</p>
+<pre><code>    * 优点：耦合度低，扩展力强。更容易解决现实世界当中更复杂的业务逻辑。组件复用性强。
+
+    * 缺点：前期投入成本较高，需要进行独立体的抽取，大量的系统分析与设计。
+
+- C语言是纯面向过程的、C++半面向对象、Java纯面向对象
+
+- 现在出现的一些新的编程语言多数都是面向对象的。人在认识现实世界的时候以面向对象的方式。
+
+- 面向对象更符合人的思维方式。</code></pre><p>2.* 面向对象的三大特征【先背会】<br>        - 封装<br>        - 继承<br>        - 多态<br>        所有面向对象的编程语言都有这三大特征。</p>
+<p>3.采用面向对象的方式开发一个软件，生命周期当中：【整个生命周期中贯穿使用OO面向对象方式】<br>            * 面向对象的分析：OOA  Object-Oriented Analysis<br>            * 面向对象的设计：OOD  Object-oriented Design<br>            * 面向对象的编程：OOP  Object Oriented Programming</p>
+<p>4.* 类和对象的概念</p>
+<p>（1）* 什么是类？<br>            - 类在现实世界当中是不存在的，是一个模板，是一个概念。是人类大脑思考抽象的结果。<br>            - 类代表了一类事物。<br>            - 在现实世界当中，对象A与对象B之间具有共同特征，进行抽象总结出一个模板，这个模板被称为类。</p>
+<p>（2）* 什么是对象？<br>            - 对象是实际存在的个体。现实世界当中实际存在。</p>
+<p>（3）* 描述一下整个软件开发的过程：观察→寻找对象，发现共同特征→归为一类→java代码表述一个类（类的定义）→通过类就可以创建对象→形成一个系统→个体差异，精确到具体个体对象</p>
+<ul>
+<li><p>程序员先观察现实世界，从现实世界当中寻找对象</p>
+<pre><code>    * 寻找了N多个对象之后，发现所有的对象都有共同特征
+    * 程序员在大脑中形成了一个模板【类】
+    * Java程序员可以通过java代码来表述一个类
+    * Java程序中有了类的定义
+    * 然后通过类就可以创建对象
+    * 有了对象之后，可以让对象直接协作起来形成一个系统。
+
+* 类--【实例化】-&gt;对象
+
+* 对象又被称为实例/instance
+
+* 对象--【抽象】--&gt;类
+
+* 重点：
+    类描述的是对象的共同特征。
+    共同特征例如：身高特征
+    这个身高特征在访问的时候，必须先创建对象，通过对象去访问这个特征。
+    因为这个特征具体的某个对象上之后，值不同。有的对象身高1.80，有的
+    对象身高2.80。</code></pre><p>  （4）* 一个类主要描述什么信息呢？</p>
+</li>
+</ul>
+<p>一个类主要描述的是 状态 + 动作。<br>            状态信息：名字、身高、性别、年龄<br>            动作信息：吃、唱歌、跳舞、学习</p>
+<pre><code>        状态--&gt; 一个类的属性
+        动作--&gt; 一个类的方法
+* 
+        类{
+            属性; //描述对象的状态信息
+            方法; //描述对象的动作信息
+        }</code></pre><p>注意：<br>                状态和动作当具体到某个对象上之后，发现最终的结果可能不一样。<br>                对象和对象之间有共同特征，但是具体到对象之后有数据的差异。</p>
+<p>（5）    * 类的定义【从这里开始编写代码】<br>        语法结构：<br>            [修饰符列表] class 类名{<br>                属性;<br>                方法;<br>            }</p>
+<pre><code>学生类，描述所有学生对象的共同特征：
+    学生对象有哪些状态信息：
+        * 学号【int】
+        * 名字【String】
+        * 性别【boolean】
+        * 年龄【int】【年龄是一个属性，年龄是一个数据，是数据就应该有数据类型】
+        * 住址【String】
+        .....
+
+    学生对象有哪些动作信息：
+        * 吃饭
+        * 睡觉
+        * 学习
+        * 玩
+        * 唱歌
+        * 跳舞
+        ....
+
+重点：属性通常是采用一个变量的形式来完成定义的。
+    int no;
+    int age;
+    String name;
+    String address;
+    boolean sex;</code></pre><hr>
+<pre><code>* java语言中包括两种数据类型：
+
+    - 基本数据类型
+        byte
+        short
+        int
+        long
+        float
+        double
+        boolean
+        char
+
+    - 引用数据类型
+        String.class SUN提供的
+        System.class SUN提供的
+
+        Student.class 程序员自定义的
+        User.class 程序员自定义的
+        Product.class 程序员自定义的
+        Customer.class 程序员自定义的
+        ......
+
+    - java语言中所有的class都属于引用数据类型。</code></pre><hr>
+<p>在类体中，方法体之外定义的变量被称为“成员变量”，成员变量没有赋值，系统赋默认值：一切向0看齐。</p>
+<ul>
+<li>数据类型              默认值<br>byte,short,int,long     0<br>float,double           0.0<br>boolean               false<br>char                 \u0000<br>引用数据类型          null  空值</li>
+</ul>
+<hr>
+<p>5.对象的创建和使用<br>1、对象又被称为实例，实例变量又被称为对象变量。<br>2、实例化对象的语法：new　类名（）；<br>——new是java语言当中的一个运算符，作用是创建对象，在ＪＶＭ堆内存当中开辟新的内存空间【实例变量存储在堆内存】。<br>——方法区内存：在类加载时，ｃｌａｓｓ字节码代码片段被加载到该内存空间当中<br>堆内存：new的对象在堆内存中存储<br>栈内存（局部变量）：方法代码片段执行的时候，会给该方法分配内存空间，在栈内存中压栈。<br>eg. Student s= new Student();<br>Student是一个引用数据类型，s是一个局部变量【在栈内存中存储】，new Student（）是一个学生对象。<br>什么是对象？new运算符在堆内存中开辟的内存空间称为对象。<br>什么是引用？引用是一个保存了另一个java对象的内存地址的变量，包括局部变量和成员变量。<br>访问实例变量得语法格式：<br>（1）读取数据/get：引用.变量名<br>（2）修改数据/set：引用.变量名=值<br>局部变量在栈内存中存储<br>成员变量中的实例变量在堆内存的java对象内部存储，实例变量是一个对象一份，100个对象100份.<br> u.addr=new Address();<br>System.out.println(u.name+” city: “+u.addr.city);</p>
+<hr>
+<p>6.变量分类：<br>—局部变量【方法体内声明】—栈内存<br>—成员变量【方法体外申明】<br>*实例变量【前边修饰符没有static】—堆内存<br>*静态变量【前边修饰符中有static】—方法区内存<br>数据→方法区内存→栈内存执行，变化最频繁→堆内存垃圾回收</p>
+<p>—垃圾回收器【自动垃圾回收机制、GC机制】什么时候会考虑将某个java对象的内存回收？<br>*当堆内存当中的java对象成为垃圾数据的时候，会被垃圾回收器回收。<br>—什么时候堆内存的java对象会变成垃圾呢？<br>*没有更多的引用指向它的时候。<br>PS：这个对象无法被访问，因为访问对象只能通过引用的方式访问。</p>
+<hr>
+<p>7.空指针异常：java.lang.NullPointerException<br>空引用访问“实例”相关的数据一定会出现空指针异常。<br>eg.   Customer c=new Customer();<br>      System.out.println(c.id);<br>      c=null;<br>      System.out.println(c.id); //java.lang.NullPointerException<br>“实例”相关的数据表示：这个数据访问的时候必须有对象的参与。这种数据就是实例相关的数据。<br>PS：每一个类中都可以编写主方法，但是一般情况下，一个系统只有一个入口，所以主方法一般写一个。<br>PS：通过赋值运算符“=”，使两个引用变量之间产生链接，从而使其连接到同一地址。</p>
+<hr>
+<p>8.面对对象的封装性<br>myeclipse快捷键：ctrl+shift+F 格式化<br>—封装的好处：<br>（1）真正的“独立体”，对外提供简单的操作入口，封装内部复杂的实现机制，形成真正的“对象”<br>（2）封装意味着以后的程序可以重复使用，并且这个事物应该适应性比较强，在任何场所都可以使用。<br>（3）提高安全性【安全级别高】<br>—封装的步骤<br>（1）所有属性私有化，使用private关键字进行修饰，private表示私有的，修饰的所有数据只能在本类中访问，在外部程序中不能直接访问。 eg.private int age;<br>（2）对外提供简单的操作入口，即外部程序必须通过操作入口进行访问；<br>——对外提供两个公开的方法，分别是set方法（修改）和get方法（读取）<br>①set方法的命名规范：<br>public void setAge(int a){<br>   age=a;<br>}<br>安全过滤：在set方法编写业务逻辑代码进行安全控制<br>②get方法的命名规范：<br>pubilc int getAge(){<br>   return age;<br>}<br>PS:<br>——setter 和getter方法没有static关键字：<br>*有static关键字修饰的方法调用：类名.方法名（实参）;<br>*没有static关键字修饰的方法调用：引用.方法名（实参）。  eg.  c.setId(100)  、  c.getId()</p>
+<p>———————————————————————————-2019.12.19-2019.12.21学习类与对象，“java-面对对象”基础知识学习完毕</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/19/6%20java%E5%9F%BA%E7%A1%80-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/" data-id="ckcwt7xma000538vm0m1f8bmg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-5 java基础-方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/10/5%20java%E5%9F%BA%E7%A1%80-%E6%96%B9%E6%B3%95/" class="article-date">
+  <time datetime="2019-12-10T14:38:24.000Z" itemprop="datePublished">2019-12-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/10/5%20java%E5%9F%BA%E7%A1%80-%E6%96%B9%E6%B3%95/">java基础-方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一、方法（Method）：一段可以完成某个特定的功能，并可被重复的使用的代码片段，相当于c语言中的函数（Function）<br>①方法定义在类体中，在一个类可以定义多个方法，方法编写的位置没有先后顺序，可以随意。<br>②方法体由java语句构成，执行自上而下。<br>③方法怎么定义，语法结构：<br>[修饰符列表] 返回值类型 方法名（形式参数列表）｛<br>方法体；<br>｝<br>语法结构说明：<br>（1）修饰符列表：非必须，目前统一写成：public static<br>（2）修饰符列表当中有“static”的话，如何调用这个方法？<br>     —— 类名.方法名（实际参数列表）;<br>（3）返回值类型：即方法执行后最终返回的结果数据类型，包括基础数据类型和引用数据类型，也有可能不返回任何数据，但返回值类型位置必须编写：void关键字<br>（4）<br>——返回值类型不是void，必须有“return 值；”，返回值类型是void，可以写”return ;”也可以不写return语句。——满足数量相同，类型对应相同。<br>——返回值类型不是void的时候，一个方法有返回值（“return 值”）时，调用此方法时，这个返回值可以接收也可以不接收，可采用变量接收返回值，也可直接输出。<br>——eg.int i=divide(a,b);    System.out.println(i);<br>或  System.out.println(divide(a,b));。<br>——返回值类型是void，可以写”return ;”也可以不写return语句，但不会返回数据，作用是终止方法执行，不干扰外层循环。<br>——return语句后面的代码不执行<br>（5）方法名：合法标识符，见名知意，首字母小写，后面每个单词首字母大写。<br>（6）形式参数列表：简称形参，局部变量，多个形参用“,”隔开，区别传递的真实数据（实际参数，即实参）——满足数量相同，类型对应相同。ps：注意自动类型转化、强制类型转化<br>④方法调用：《方法的修饰列表当中有static》<br>语法规则：类名.方法名（实参列表）；<br>修饰符列表有static关键字的：  调用本类的方法——类名可省略——方法名（实参列表）； ；调用其他类的方法——必须有类名（若省略类名，默认从当前类中寻找）——类名.方法名（实参列表）；。<br>public static ??? 方法名（？？？）｛<br>？？？<br>return 值；<br>｝<br>public static void main（String[] args）｛<br>类名.方法名（实际参数列表）<br>｝</p>
+<p>⑤ 方法执行过程中的内存分配<br>    * 方法的重载机制<br>    * 方法的自上而下执行、递归调用：只有在主方法中调用的方法才能执行，未调用不执行输出。<br>1、方法只定义，不调用，不分配内存空间<br>2、在JVM内存划分上有三块主要的内存空间（此外还有其他内存空间）：方法区内存、堆内存、栈内存<br>3、关于栈数据结构：栈帧→栈（栈顶元素、栈底元素）；压栈/入栈/push→栈→弹栈/出栈/pop   ps：类似柱形堆积的模块<br>——栈：stack，是一种数据结构<br>***栈内存：<br>主要存储局部变量，不同方法体中的局部变量只是”值的传递”，超出本方法体区域无任何意义，即不同方法体中可以使用同一变量名，而不干扰。<br>——数据结构反映的是数据的存储形态。<br>——必修：数据结构+算法<br>——常见的数据结构：数组、队列、栈、链表、二叉树、哈希表/散列表…….<br>4、方法执行时代码片段在哪里？方法执行过程的内存在哪里分配？<br>——方法代码片段属于.class字节码文件的一部分，字节码文件在类加载的时候，将其放在了方法区。所以JVM中的三块主要内存空间中方法区内存最先有数据，存放了代码片段。<br>——该代码片段位于方法区，可重复调用，调用时分配内存，代码片段与数据加载在方法区内存、运行在栈内存中分配<br>——局部变量在“方法体”中声明，在运行阶段内存在栈内分配。<br>——压栈/入栈/push：给方法分配内存<br>——弹栈/出栈/pop：释放该方法的内存空间</p>
+<p>重点：方法调用时，在参数传递过程中实际是变量的“值”的传递。<br>Ps: 代码中红色标识符为sun公司提供的方法：存放在jdk→jre→lib→类库：rt.jar压缩包中(.class字节码文件），eg.System \String</p>
+<p>⑥方法重载/overload：同一个类，功能相似，方法名相同，以参数差别区分。<br>——1.什么时候考虑使用方法重载？<br>*功能相似时，尽可能让方法名相同。<br>——2.什么条件满足方法重载？<br>*同一个类，功能相似，方法名相同，以参数差别（数量、顺序、类型）区分。<br>——3.方法重载和什么有关系？和什么没有关系？<br>*方法重载和方法名、参数列表有关<br>*方法重载和返回值类型、修饰符列表无关<br>——4.方法重载的具体应用<br>*制作方法原码，并生成.class文件，之后可引用，类似sun公司制作的System 、 String。</p>
+<p>⑦方法的递归调用<br>1.方法的递归调用：方法自身调用自身<br>2.方法递归很耗费栈内存，递归算法不用的时候尽量别用<br>3.<br>递归必须有结束条件，没有结束条件一定会发生栈内存溢出错误。<br>——栈内存溢出错误：java.lang.StackOverflowError<br>错误发生无法挽回，最终导致JVM停止工作。<br>——递归即使有了结束条件，即使结束条件是正确的，也可能发生栈内存溢出错误，因为递归的太深了。<br>4.有些情况下该功能得实现必须依靠递归。<br>eg.1~N的累加或累积<br>public static int sum(int n){<br>   if(n==1){<br>     return 1;<br>     }<br>   return n+sum(n-1);<br>}<br>————————————————————–2019.12.10-2019.12.18学习“方法”中,“方法“学习完毕</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/10/5%20java%E5%9F%BA%E7%A1%80-%E6%96%B9%E6%B3%95/" data-id="ckcwt7xm9000438vma6be25rs" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-4 控制语句2-循环结构" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/06/4%20%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A52-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/" class="article-date">
+  <time datetime="2019-12-06T15:36:17.000Z" itemprop="datePublished">2019-12-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/06/4%20%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A52-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">控制语句2-循环结构</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>二、 循环结构<br>        - for<br>        - while<br>        - do..while()<br>1.for循环的语法结构：<br>        for(初始化表达式;布尔表达式;更新表达式){<br>           java语句；<br>}</p>
+<p>for循环的执行原理/执行过程：<br>①初始化表达式、布尔表达式、更新表达式：都不是必须的；<br>②过程：初始化表达式→布尔表达式→循环体→更新表达式→布尔表达式→循环体体→更新表达式→…….→布尔表达式=false<br>③for和if的嵌套<br>（1）内层循环和外层循环的变量名不能重复<br>（2）外层循环的终止要求未满足时，多次重复内层循环，直至满足外层循环的终止条件。<br>（3）嵌套循环的执行过程：外层循环→内层循化→内层循环终止→外层循环→内层循化→内层循环终止→…….→外层循环终止<br>eg.计算1~100所有奇数的和（累加求和：+=）、九九乘法表的编译</p>
+<p>（2）while语句：布尔表达式为true即执行，注意死循环<br>while循环的语法结构：<br>while（布尔表达式）｛<br>循环体；<br>｝<br>（3）do…while循环：区别while循环，先执行后判断<br>1、do…while循环的语法结构：<br>do｛<br>循环体；<br>｝while（布尔表达式）；<br>2、do…while循环的执行原理：区别while循环，先执行后判断</p>
+<hr>
+<p>三、控制循环的语句<br>（1）break语句<br>①break为关键字，翻译为“中断/折断”<br>②break;是一个完整的java语句<br>③作用：终止switch语句的执行，终止循环语句的执行，终止最近的语句，或者指定终止某循环，需要给循环起名（eg.for1: for循环），采用这种语法：break 循环名;（eg. break for1;)<br>（2）continue语句<br>①continue表示：继续/go on/下一个<br>②continue;是一个完整的java语句<br>③区别break：continue表示直接进入下一个循环继续执行，终止当前此次循环<br>④指定终止某次循环，需要给循环起名（eg.for1: for循环），采用这种语法：continue 循环名;（eg. continue for1;)</p>
+<hr>
+<p>PS：编程运行问题\bug记录：<br>1.进行语法分析时已到达文件结尾（原因：分析已达到文件结尾一般是括号没有闭合，或者缺少了分号        解决方案：手工查看括号闭合情况）<br>2.找不到符号（未定义初始化变量）<br>3.程序在编译阶段不运行，即不直接判断表达式的结果，只分析语法。</p>
+<p>———————————————————————2019.12.06~2019.12.07学习for语句中<br>—————————————————————————–2019.12.08 for语句学习完毕<br>————————————————————————————2019.12.09控制语句学习完毕</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/06/4%20%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A52-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/" data-id="ckcwt7xm8000338vm002u18iy" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-3 java-控制语句1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/30/3%20java-%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A51/" class="article-date">
+  <time datetime="2019-11-30T15:17:50.000Z" itemprop="datePublished">2019-11-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/30/3%20java-%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A51/">java-控制语句1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>控制语句：可嵌套使用，代码格式要保证完美（该缩进的时候必须缩进，大部分情况下使用大括号包围的需要缩进）</p>
+<pre><code>* 选择结构
+    - if,if..else
+    - switch
+
+* 循环结构
+    - for
+    - while
+    - do..while()
+
+* 控制循环的语句
+    - break
+    - continue</code></pre><p>（1）if语句的语法结构：四种编写方式<br>第一种： if（布尔表达式）｛<br>                 java语句;<br>                 java语句;<br>                 java语句;<br>                 …<br>｝<br>第二种： if（布尔表达式）｛<br>                 java语句;<br>                 java语句;<br>                 java语句;<br>                 …<br>｝else｛<br>                 java语句;<br>                 java语句;<br>                 …<br>｝<br>第三种：if+else if（布尔表达式） <em>n<br>第四种：if+else if （布尔表达式）</em>n+else</p>
+<p>PS:面向对象：接收用户键盘输入，即“键盘”→“内存”<br>     java.util.Scanner s=new java.util.Scanner(System.in);接收用户键盘输入，即“键盘”→“内存”<br>     String str=s.next(); 或 int num=s.nextInt(); 等待用户输入，输入之后自动接收，附值给str 或num变量<br>     System.out.println(); 负责向控制台输出【内存→控制台】<br>PS：else前必须有if。</p>
+<hr>
+<p>（2）switch语句的语法结构：<br>switch(int或String类型的字面值或变量)｛<br>   case int或String类型的字面值或变量：<br>          java语句；<br>          …<br>          break;<br>   case int或String类型的字面值或变量：<br>          java语句；<br>          …<br>          break;<br>   case int或String类型的字面值或变量：<br>          java语句；<br>          …<br>          break;<br>…<br>default:<br>       java语句；<br>       …<br>｝<br>PS：switch 、 case 后面只能是int（自动类型转换：byte\short\char→int）或String类型的字面值或变量，不能是探测其他类型。</p>
+<p>switch语句执行原理：<br>①switch(int或String类型的字面值或变量)  与  case int或String类型的字面值或变量   进行匹配，自上而下的顺序匹配，匹配成功的分支执行<br>②遇到“break”，整个switch语句终止<br>③case穿透现象： 匹配成功的分支执行，若没有”break”语句，直接进入下一分支执行（不进行匹配）。<br>⑥所有分支都没有匹配成功，当有default的语句，会执行default分支当中的程序。<br>⑦case可以合并：只要符合其中一个case，分支均会执行<br>int i=1；<br>switch（i）｛<br>   case 1: case 2: case 3: …<br>       system.out.println(“Test Code!”);<br>}<br>eg.简单计算机系统,int（自动类型转换：byte\short\char→int）的应用</p>
+<p>———————————————-2019.11.30<br>————————————————2019.12.01<br>————————————————-2019.12.02 多练习，if语句复习完毕<br>—————————————————–2019.12.03 switch语句学习<br>——————————————————-2019.12.04 switch语句练习简单计算机系统<br>——————————————————–2019.12.05 switch语句复习完毕</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/11/30/3%20java-%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A51/" data-id="ckcwt7xm7000238vm4cl74ga4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2 java基础知识2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/27/2%20java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%862/" class="article-date">
+  <time datetime="2019-11-27T14:35:09.000Z" itemprop="datePublished">2019-11-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/27/2%20java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%862/">java基础知识2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第二章 java语言基础<br>java 的SE类库：字节码：rt.jar  原码：src.zip  eg.String.class   String.java<br>字符编码（文字←→二进制，eg.unicode编码、UTF-8……）、字节编码（相当于词典）</p>
+<hr>
+<p>一、* 标识符: 可以自主命名的单词，eg.类名、方法名、变量名、接口名、常量名<br>1.命名规则：<br>（1）“数字、字母、下划线_、美元符号$”组成，不能含有其他符号<br>（2）不能数字开头<br>（3）严格区分大小写<br>（4）关键字不能作为标识符<br>（5）理论上无长度限制<br>2.遵循驼峰命名方式 ：每个单词首字母大写<br>3.PS: 类名、接口名：每个单词首字母大写<br>变量名、方法名：首字母小写，后面每个单词首字母大写<br>常量名：全部大写</p>
+<p>二、* 关键字：<br>关键字一律用小写字母标识，按其用途划分为如下几组。</p>
+<p>(1)用于数据类型。<br>　　用于数据类型的关键字有 boolean、byte、char、 double、 false、float、int、long、new、short、true、void、instanceof。</p>
+<p>(2)用于语句。<br>　　用于语句的关键字有break、case、 catch、 continue、 default 、do、 else、 for、 if、return、switch、try、 while、 finally、 throw、this、 super。</p>
+<p>(3)用于修饰<br>　　用于修饰的关键字有 abstract、final、native、private、 protected、public、static、synchronized、transient、 volatile。</p>
+<p>(4)用于方法、类、接口、包和异常。<br>　　用于方法、类、接口、包和异常的关键字有 class、 extends、 implements、interface、 package、import、throws。<br>　　还有些关键字,如cat、 future、 generic、innerr、 operator、 outer、rest、var等都是Java保留的没有意义的关键字。<br>　　另外，Java还有3个保留字:true、false、null。它们不是关键字，而是文字。包含Java定义的值。和关键字一样,它们也不可以作为标识符使用</p>
+<hr>
+<p>三、* 字面值=数据:<br> 十进制：缺省默认的方式  八进制：0开始   十六进制：0x开始</p>
+<p>四、* 变量</p>
+<p>五、* 数据类型（8种）：byte（-128 ~ 127）、short（-32768 ~ 32767）、int、long&lt;float&lt;double，boolean（true、false）、char（0~65535）</p>
+<p>计算：<br>类型转换：<br>(1)自动类型转换：<br>默认byte、short、char→int  ； float&lt;double   eg. float t=(float)3.0  or  float t=3.0f<br>①小容量→大容量 long x=123；<br>②byte、short、char→int&lt;long&lt;float&lt;double→java.math.BigDecimal（精度更高、引用数据类型）<br>(2)强制类型转换：编译问题（数据类型、byte\short\char取值范围）、精度损失（原码、反码、补码）<br>long: 0L         float: f/F<br>byte a=（byte）123 ， byte a=123<br>long b=123432L</p>
+<hr>
+<p>3、运算符：无小括号的情况下，自左向右的顺序依次运算<br>（1）* 算术运算符:  +  -  *  /  %（求余）  ++   –<br>（2）* 关系运算符（结果输出：boolean（true、false））：<br>                                            &gt;  &gt;=  &lt;  ==  !==<br>（3）* 逻辑运算符（两边必须为boolean型，其结果也为boolean型）：<br>&amp;（与）  ｜（或）  ！（非：单目运算符）  ^ （异或: 只要两边的算子不一样，就是true）<br>&amp;&amp;（短路与，false即发生短路）  ||（短路或，true即发生短路）</p>
+<p>（4）* 扩展的赋值类运算符(不改变运算结果数据类型：强制类型转换——超范围，注意精度损失）：  +=  -=  *=  /=  %=<br>区别：<br> b+=5：等同于 b=(byte)(b+5)， 区别b=b+5(编译错误，编译器发现b+5为int类型）;   可用于“累加、累减…….”</p>
+<p>（5）* 字符串连接运算符（两边数据只要有一个数据是字符串，即进行字符串连接运算）： +<br>eg .  System.out.println(20+30+”30”);//5030<br>string是引用数据类型，区别基本数据类型（int、char…….）  eg. string s=”abc”</p>
+<p>（6）* 三目运算符/三元运算符/条件运算符：<br>1）注意要组成一句完整的java语句<br>2）类型兼容<br>string是引用数据类型，区别基本数据类型（int、char…….）  eg. string s=”abc”</p>
+<p>语法规则：布尔表达式？表达式1：表达2         ture→表达式1  false→表达2<br>    boolean sex=false;<br>        char x=(sex?’H’:’y’);<br>    String y=(sex?”man”:”woman”);<br>        System.out.println(y);<br>    System.out.println(sex?”man”:”woman”);<br>    System.out.println(x+y);</p>
+<p>—————————————————-2019.11.27未复习完全，明天继续复习<br>———————————————————2019.11.28复习运算符<br>————————————————————2019.11.29运算符复习完毕</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/11/27/2%20java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%862/" data-id="ckcwt7xm6000138vm6ovz4yc5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-1 java基础知识1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/26/1%20java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%861/" class="article-date">
+  <time datetime="2019-11-26T14:14:20.000Z" itemprop="datePublished">2019-11-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/26/1%20java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%861/">java基础知识1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一、前提<br>1.windows操作系统默认情况下是不显示文件扩展名的，将文件的扩展名显示出来：<br>    * 计算机 –&gt; 组织 –&gt; 文件夹和搜索选项 –&gt; 查看 –&gt; 隐藏已知文件类型的扩展名【对勾去掉】<br>2.打开DOS命令窗口：<br>        - 快捷键：win + r，打开运行窗口<br>        - 输入cmd回车<br>退出DOS命令窗口：<br>        输入exit–&gt;回车</p>
+<ul>
+<li>DOS窗口当中也可以设置字体和屏幕以及文字的颜色。</li>
+</ul>
+<p>二、DOS界面常用命令：<br>（1）清屏：cls<br>（2）强行终止DOS命令窗口中正在运行的程序：ctrl + c eg.终止本地静态博客的运行<br>（3）创建目录：mkdir abc【表示在当前所在目录下新建一个目录，起名abc】</p>
+<p>（4）目录切换命令：cd 路径</p>
+<ul>
+<li>自动补全：cd e 【然后按tab键，当前所在的目录下所有以e开始的目录自动补全路径，当这个自动补全的路径不是自己想要的路径，可以继续使用tab键】</li>
+<li>回到上级目录：cd .. 【..是一个路径，代表当前路径的上级路径】<pre><code>cd ../../../</code></pre></li>
+<li>当前目录：cd.</li>
+<li>直接回到根路径：cd \</li>
+</ul>
+<p>（5）查看当前目录下所有的子文件和子目录：dir</p>
+<p>（6）怎么切换盘符：即切换计算机中的C、D、E、F盘<br>        c: 回车<br>        d: 回车<br>        e: 回车<br>        f: 回车</p>
+<p>三、关于windows操作系统当中常用的快捷键：<br>        * win + r    打开运行窗口<br>    * win + d    显示桌面<br>    * win + e    打开资源管理器=打开计算机<br>    * win + L    锁屏<br>    * * alt + tab    应用之间的切换<br>四、文本编辑快捷键：<br>        * ctrl + a    全选<br>    * ctrl + c    复制<br>    * ctrl + v    粘贴<br>    * ctrl + s    保存<br>    * ctrl + x      剪切<br>    * ctrl + z    撤销<br>    * ctrl + y      重做<br>    * tab            缩进/多行缩进<br>    * shift + tab    取消缩进<br>    * HOME          回到行首<br>    * END            回到行尾<br>    * ctrl + end    回到文件末尾<br>    * ctrl + home    回到文件头<br>    * shift + home    选中光标前半行<br>    * shift + end    选中光标后半行<br>    * ctrl + shift + 向右或者向左的箭头  选中前或后字符、单词<br>    * 鼠标双击：选中一个单词<br>    * 鼠标三击：选中一行</p>
+<p>五、关键术语：<br>1）* JDK【Java开发工具箱】<br>    * JRE【Java的运行时环境】<br>               * JVM【Java虚拟机】<br>三者之间的关系：JDK 中包含JRE，JRE中包含JVM</p>
+<p>2）Java的加载与执行：java.exe：负责运行     javac.exe：负责编译<br>   （1）* 程序员在xxx.java文件中编写源代码，源代码必须符合java的语法，这些源代码就是高级语言。<br>    存放源代码的文件被称为源文件。<br>   （2）编译生成的程序被称为：字节码程序。编译生成的文件是：xxx.class文件<br>   （3）编译和运行可以在不同的操作系统中完成。<br>eg.源文件创建=新建名为xxx.java文本——&gt; 在当前目录javac.exe命令编译：javac 源文件路径 ——&gt; xxx.class（可移植到其他平台运行）——&gt;运行：java 类名<br>PS：源文件创建=新建名为xxx.java文本——&gt;java 类名.java ：可直接运行<br>以上程序的执行原理：输入：java A → 启动JVM——&gt;启动“类加载器-Class Loader”——&gt;搜索“类名.class”字节码文件——&gt;将.class文件转换成”二进制”，操作系统可以直接识别二进制，操作系统执行二进制码和底层的硬件平台进行交互。</p>
+<p>3）环境变量path：windows操作系统在查找某个命令的时候是怎么查找的？<br>    * 首先会从当前目录下找这个命令<br>            * 当前目录下不存在这个命令的话，会去环境变量path指定的路径当中查找该命令。<br>            * 还是找不到则出现错误提示信息。’javac’ 不是内部或外部命令，也不是可运行的程序</p>
+<pre><code>       - path环境变量隶属于windows操作系统，和java无关，这个环境变量主要用来指定命令的搜索路径。
+
+* 环境变量怎么配置？
+       计算机 --&gt; 点击右键 --&gt; 属性 --&gt; 高级系统设置 --&gt; 环境变量
+
+* 环境变量配置包括用户级别和系统级别
+   任何一个环境变量都有变量名和变量值，例如path环境变量：
+       变量名是:path
+       值：路径【多个路径之间必须采用分号隔开，而且要求分号必须是半角分号】
+       path=C:\Program Files (x86)\Java\jdk1.7.0_75\bin;otherpath;otherpath.....</code></pre><p>PS：javac要想能随意使用，需要将javac所在目录配置到环境变量path当中。</p>
+<p>六、应用：<br>1.ClassLoader是在哪个位置上搜索HelloWorld.class字节码文件的？    </p>
+<ul>
+<li>默认情况下，ClassLoader从当前路径下加载xxx.class字节码文件<pre><code>* 当然，也可以让ClassLoader去某个指定的路径下加载字节码文件，这时需要配置环境变量classpath
+* classpath环境变量属于java语言中的环境变量，不属于windows操作系统【PATH环境变量属于操作系统】
+* classpath是给ClassLoader类加载器指路的。
+* 设置这样的环境变量：classpath=D:\course\JavaProjects\02-JavaSE\day02
+    - 打开dos命令窗口在任意位置，都可以执行：java HelloWorld
+* classpath环境变量没有配置的话，类加载器默认从当前路径下找字节码文件，
+当classpath环境变量配置为某个指定的路径之后，类加载器只去指定的路径当中加载字节码文件。
+* 综上所述，环境变量classpath不再配置，这样类加载器会自动从当前路径下加载class字节码文件。
+①所以，每一次执行.class程序的时候，需要在DOS命令窗口中先切换到.class字节码文件所在的路径下，然后运行。
+②* 当然，classpath也可以这样配置：classpath=.</code></pre></li>
+</ul>
+<p>七、需要记忆：<br>        * public表示公开的<br>        * class表示定义一个类<br>        * static表示静态的<br>        * void表示空<br>                *main表示方法名是main<br>        * System.out.println(“”); 向控制台输出消息<br>        * 类体<br>        * 方法体<br>        * 类体中不能直接编写java语句【除声明变量之外】<br>        * 一个java语句必须以“;”结束<br>        * 方法体中可以编写多条java语句<br>        * 主方法是程序的入口，固定写法，SUN规定的。</p>
+<p>八、public class 和 class 的区别：你的独一无二，我的肆意生长。<br>*一个java源文件中public class不是必须存在的，若存在public class其类名与源文件名保持一致。<br>*程序的顺利运行前提：<br>                   定义主方法：public static void main(String[] args)<br>———————————————————————————2019.11.26：java复习</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/11/26/1%20java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%861/" data-id="ckcwt7xlz000038vmfqib1tpn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-blog搭建学习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/25/blog%E6%90%AD%E5%BB%BA%E5%AD%A6%E4%B9%A0/" class="article-date">
+  <time datetime="2019-11-25T11:22:39.000Z" itemprop="datePublished">2019-11-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/25/blog%E6%90%AD%E5%BB%BA%E5%AD%A6%E4%B9%A0/">静态blog-hexo搭建学习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.安装Node.js：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></p>
+<p>2.W7：点击屏幕左下开始，输入cmd，打开DOS界面</p>
+<p>3.查看node.js版本，v=version：<br>于DOS界面输入命令：node -v      </p>
+<p>4.安装Hexo框架<br>输入安装命令：<br>$ npm install -g hexo-cli<br>耐心等待安装结束，查看版本：hexo -v</p>
+<p>5.安装cnpm：<br>$ npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br>查看cnpm版本：cnpm -v</p>
+<h2 id="6-安装git"><a href="#6-安装git" class="headerlink" title="6.安装git"></a>6.安装git</h2><p>本地使用<br>1.hexo init<br>2.hexo new “BlogName”<br>3.hexo generate<br>4.hexo s   (s=server  ,  <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>)   </p>
+<p>服务器部署<br>1.在github创建新仓库：YourGithubName.github.io<br>2.在Hexo目录下打开git bash here，并输入以下安装Hexo的git部署插件命令：<br>$ npm install hexo-deployer-git –save<br>3.在Hexo目录下打开_config.yaml文件，做如下修改：</p>
+<h1 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h1><h2 id="Docs-https-hexo-io-docs-deployment-html"><a href="#Docs-https-hexo-io-docs-deployment-html" class="headerlink" title="Docs: https://hexo.io/docs/deployment.html"></a>Docs: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">https://hexo.io/docs/deployment.html</a></h2><p>deploy:<br>  type: git<br>  repo: <a href="https://github.com/yuttts/yuttts.github.io.git" target="_blank" rel="noopener">https://github.com/yuttts/yuttts.github.io.git</a><br>  branch: master<br>  4.部署，输入命令：<br>$ hexo d<br> 5.部署成功后，输入YourGithubName.github.io，即可访问。</p>
+<p>———————————————–2019.11.25更新</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/11/25/blog%E6%90%AD%E5%BB%BA%E5%AD%A6%E4%B9%A0/" data-id="ckcwt7xmc000638vmab5s3dgz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
 
 
 </section>
@@ -120,6 +705,13 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></li></ul>
+    </div>
+  </div>
+
 
   
     
@@ -131,7 +723,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
     </div>
   </div>
 
@@ -144,7 +736,23 @@
       <ul>
         
           <li>
+            <a href="/2020/07/22/%E6%B5%8B%E8%AF%95/">测试</a>
+          </li>
+        
+          <li>
             <a href="/2020/07/22/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/22/7-%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E4%B8%8E%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/">7-构造方法与参数传递</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/19/6%20java%E5%9F%BA%E7%A1%80-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/">java基础-类与对象</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/10/5%20java%E5%9F%BA%E7%A1%80-%E6%96%B9%E6%B3%95/">java基础-方法</a>
           </li>
         
       </ul>

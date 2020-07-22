@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>java基础-方法 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、方法（Method）：一段可以完成某个特定的功能，并可被重复的使用的代码片段，相当于c语言中的函数（Function）①方法定义在类体中，在一个类可以定义多个方法，方法编写的位置没有先后顺序，可以随意。②方法体由java语句构成，执行自上而下。③方法怎么定义，语法结构：[修饰符列表] 返回值类型 方法名（形式参数列表）｛方法体；｝语法结构说明：（1）修饰符列表：非必须，目前统一写成：publi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java基础-方法">
+<meta property="og:url" content="http://yoursite.com/2019/12/10/5%20java%E5%9F%BA%E7%A1%80-%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、方法（Method）：一段可以完成某个特定的功能，并可被重复的使用的代码片段，相当于c语言中的函数（Function）①方法定义在类体中，在一个类可以定义多个方法，方法编写的位置没有先后顺序，可以随意。②方法体由java语句构成，执行自上而下。③方法怎么定义，语法结构：[修饰符列表] 返回值类型 方法名（形式参数列表）｛方法体；｝语法结构说明：（1）修饰符列表：非必须，目前统一写成：publi">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-12-10T14:38:24.000Z">
+<meta property="article:modified_time" content="2019-12-18T14:48:08.000Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-5 java基础-方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/10/5%20java%E5%9F%BA%E7%A1%80-%E6%96%B9%E6%B3%95/" class="article-date">
+  <time datetime="2019-12-10T14:38:24.000Z" itemprop="datePublished">2019-12-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      java基础-方法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一、方法（Method）：一段可以完成某个特定的功能，并可被重复的使用的代码片段，相当于c语言中的函数（Function）<br>①方法定义在类体中，在一个类可以定义多个方法，方法编写的位置没有先后顺序，可以随意。<br>②方法体由java语句构成，执行自上而下。<br>③方法怎么定义，语法结构：<br>[修饰符列表] 返回值类型 方法名（形式参数列表）｛<br>方法体；<br>｝<br>语法结构说明：<br>（1）修饰符列表：非必须，目前统一写成：public static<br>（2）修饰符列表当中有“static”的话，如何调用这个方法？<br>     —— 类名.方法名（实际参数列表）;<br>（3）返回值类型：即方法执行后最终返回的结果数据类型，包括基础数据类型和引用数据类型，也有可能不返回任何数据，但返回值类型位置必须编写：void关键字<br>（4）<br>——返回值类型不是void，必须有“return 值；”，返回值类型是void，可以写”return ;”也可以不写return语句。——满足数量相同，类型对应相同。<br>——返回值类型不是void的时候，一个方法有返回值（“return 值”）时，调用此方法时，这个返回值可以接收也可以不接收，可采用变量接收返回值，也可直接输出。<br>——eg.int i=divide(a,b);    System.out.println(i);<br>或  System.out.println(divide(a,b));。<br>——返回值类型是void，可以写”return ;”也可以不写return语句，但不会返回数据，作用是终止方法执行，不干扰外层循环。<br>——return语句后面的代码不执行<br>（5）方法名：合法标识符，见名知意，首字母小写，后面每个单词首字母大写。<br>（6）形式参数列表：简称形参，局部变量，多个形参用“,”隔开，区别传递的真实数据（实际参数，即实参）——满足数量相同，类型对应相同。ps：注意自动类型转化、强制类型转化<br>④方法调用：《方法的修饰列表当中有static》<br>语法规则：类名.方法名（实参列表）；<br>修饰符列表有static关键字的：  调用本类的方法——类名可省略——方法名（实参列表）； ；调用其他类的方法——必须有类名（若省略类名，默认从当前类中寻找）——类名.方法名（实参列表）；。<br>public static ??? 方法名（？？？）｛<br>？？？<br>return 值；<br>｝<br>public static void main（String[] args）｛<br>类名.方法名（实际参数列表）<br>｝</p>
+<p>⑤ 方法执行过程中的内存分配<br>    * 方法的重载机制<br>    * 方法的自上而下执行、递归调用：只有在主方法中调用的方法才能执行，未调用不执行输出。<br>1、方法只定义，不调用，不分配内存空间<br>2、在JVM内存划分上有三块主要的内存空间（此外还有其他内存空间）：方法区内存、堆内存、栈内存<br>3、关于栈数据结构：栈帧→栈（栈顶元素、栈底元素）；压栈/入栈/push→栈→弹栈/出栈/pop   ps：类似柱形堆积的模块<br>——栈：stack，是一种数据结构<br>***栈内存：<br>主要存储局部变量，不同方法体中的局部变量只是”值的传递”，超出本方法体区域无任何意义，即不同方法体中可以使用同一变量名，而不干扰。<br>——数据结构反映的是数据的存储形态。<br>——必修：数据结构+算法<br>——常见的数据结构：数组、队列、栈、链表、二叉树、哈希表/散列表…….<br>4、方法执行时代码片段在哪里？方法执行过程的内存在哪里分配？<br>——方法代码片段属于.class字节码文件的一部分，字节码文件在类加载的时候，将其放在了方法区。所以JVM中的三块主要内存空间中方法区内存最先有数据，存放了代码片段。<br>——该代码片段位于方法区，可重复调用，调用时分配内存，代码片段与数据加载在方法区内存、运行在栈内存中分配<br>——局部变量在“方法体”中声明，在运行阶段内存在栈内分配。<br>——压栈/入栈/push：给方法分配内存<br>——弹栈/出栈/pop：释放该方法的内存空间</p>
+<p>重点：方法调用时，在参数传递过程中实际是变量的“值”的传递。<br>Ps: 代码中红色标识符为sun公司提供的方法：存放在jdk→jre→lib→类库：rt.jar压缩包中(.class字节码文件），eg.System \String</p>
+<p>⑥方法重载/overload：同一个类，功能相似，方法名相同，以参数差别区分。<br>——1.什么时候考虑使用方法重载？<br>*功能相似时，尽可能让方法名相同。<br>——2.什么条件满足方法重载？<br>*同一个类，功能相似，方法名相同，以参数差别（数量、顺序、类型）区分。<br>——3.方法重载和什么有关系？和什么没有关系？<br>*方法重载和方法名、参数列表有关<br>*方法重载和返回值类型、修饰符列表无关<br>——4.方法重载的具体应用<br>*制作方法原码，并生成.class文件，之后可引用，类似sun公司制作的System 、 String。</p>
+<p>⑦方法的递归调用<br>1.方法的递归调用：方法自身调用自身<br>2.方法递归很耗费栈内存，递归算法不用的时候尽量别用<br>3.<br>递归必须有结束条件，没有结束条件一定会发生栈内存溢出错误。<br>——栈内存溢出错误：java.lang.StackOverflowError<br>错误发生无法挽回，最终导致JVM停止工作。<br>——递归即使有了结束条件，即使结束条件是正确的，也可能发生栈内存溢出错误，因为递归的太深了。<br>4.有些情况下该功能得实现必须依靠递归。<br>eg.1~N的累加或累积<br>public static int sum(int n){<br>   if(n==1){<br>     return 1;<br>     }<br>   return n+sum(n-1);<br>}<br>————————————————————–2019.12.10-2019.12.18学习“方法”中,“方法“学习完毕</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/10/5%20java%E5%9F%BA%E7%A1%80-%E6%96%B9%E6%B3%95/" data-id="ckcwt7xm9000438vma6be25rs" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/12/19/6%20java%E5%9F%BA%E7%A1%80-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          java基础-类与对象
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/12/06/4%20%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A52-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">控制语句2-循环结构</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/22/%E6%B5%8B%E8%AF%95/">测试</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/22/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/22/7-%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E4%B8%8E%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/">7-构造方法与参数传递</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/19/6%20java%E5%9F%BA%E7%A1%80-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/">java基础-类与对象</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/10/5%20java%E5%9F%BA%E7%A1%80-%E6%96%B9%E6%B3%95/">java基础-方法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

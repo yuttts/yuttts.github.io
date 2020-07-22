@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>java基础-类与对象 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="第三章：面向对象【Java语言的核心机制，最重要的内容，Java语言的特色】 1.* 面向过程和面向对象的区别 （1）- 面向过程：主要关注点是：实现的具体过程，因果关系【集成显卡的开发思路】 * 优点：对于业务逻辑比较简单的程序，可以达到快速开发，前期投入成本较低。  * 缺点：采用面向过程的方式开发很难解决非常复杂的业务逻辑，另外面向过程的方式导致软件元素之间的“耦合度”非常高，只要其中一环出">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java基础-类与对象">
+<meta property="og:url" content="http://yoursite.com/2019/12/19/6%20java%E5%9F%BA%E7%A1%80-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="第三章：面向对象【Java语言的核心机制，最重要的内容，Java语言的特色】 1.* 面向过程和面向对象的区别 （1）- 面向过程：主要关注点是：实现的具体过程，因果关系【集成显卡的开发思路】 * 优点：对于业务逻辑比较简单的程序，可以达到快速开发，前期投入成本较低。  * 缺点：采用面向过程的方式开发很难解决非常复杂的业务逻辑，另外面向过程的方式导致软件元素之间的“耦合度”非常高，只要其中一环出">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-12-19T14:45:39.000Z">
+<meta property="article:modified_time" content="2019-12-21T11:52:36.000Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-6 java基础-类与对象" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/19/6%20java%E5%9F%BA%E7%A1%80-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/" class="article-date">
+  <time datetime="2019-12-19T14:45:39.000Z" itemprop="datePublished">2019-12-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      java基础-类与对象
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第三章：面向对象【Java语言的核心机制，最重要的内容，Java语言的特色】</p>
+<p>1.* 面向过程和面向对象的区别</p>
+<p>（1）- 面向过程：<br>主要关注点是：实现的具体过程，因果关系【集成显卡的开发思路】</p>
+<pre><code>* 优点：对于业务逻辑比较简单的程序，可以达到快速开发，前期投入成本较低。
+
+* 缺点：采用面向过程的方式开发很难解决非常复杂的业务逻辑，另外面向过程的方式导致软件元素之间的“耦合度”非常高，只要其中一环出问题，整个系统受到影响，</code></pre><p>导致最终的软件“扩展力”差。另外，由于没有独立体的概念，所以无法达到组件复用。</p>
+<p>（2）- 面向对象：<br>主要关注点是：主要关注对象【独立体】能完成哪些功能。【独立显卡的开发思路】</p>
+<pre><code>    * 优点：耦合度低，扩展力强。更容易解决现实世界当中更复杂的业务逻辑。组件复用性强。
+
+    * 缺点：前期投入成本较高，需要进行独立体的抽取，大量的系统分析与设计。
+
+- C语言是纯面向过程的、C++半面向对象、Java纯面向对象
+
+- 现在出现的一些新的编程语言多数都是面向对象的。人在认识现实世界的时候以面向对象的方式。
+
+- 面向对象更符合人的思维方式。</code></pre><p>2.* 面向对象的三大特征【先背会】<br>        - 封装<br>        - 继承<br>        - 多态<br>        所有面向对象的编程语言都有这三大特征。</p>
+<p>3.采用面向对象的方式开发一个软件，生命周期当中：【整个生命周期中贯穿使用OO面向对象方式】<br>            * 面向对象的分析：OOA  Object-Oriented Analysis<br>            * 面向对象的设计：OOD  Object-oriented Design<br>            * 面向对象的编程：OOP  Object Oriented Programming</p>
+<p>4.* 类和对象的概念</p>
+<p>（1）* 什么是类？<br>            - 类在现实世界当中是不存在的，是一个模板，是一个概念。是人类大脑思考抽象的结果。<br>            - 类代表了一类事物。<br>            - 在现实世界当中，对象A与对象B之间具有共同特征，进行抽象总结出一个模板，这个模板被称为类。</p>
+<p>（2）* 什么是对象？<br>            - 对象是实际存在的个体。现实世界当中实际存在。</p>
+<p>（3）* 描述一下整个软件开发的过程：观察→寻找对象，发现共同特征→归为一类→java代码表述一个类（类的定义）→通过类就可以创建对象→形成一个系统→个体差异，精确到具体个体对象</p>
+<ul>
+<li><p>程序员先观察现实世界，从现实世界当中寻找对象</p>
+<pre><code>    * 寻找了N多个对象之后，发现所有的对象都有共同特征
+    * 程序员在大脑中形成了一个模板【类】
+    * Java程序员可以通过java代码来表述一个类
+    * Java程序中有了类的定义
+    * 然后通过类就可以创建对象
+    * 有了对象之后，可以让对象直接协作起来形成一个系统。
+
+* 类--【实例化】-&gt;对象
+
+* 对象又被称为实例/instance
+
+* 对象--【抽象】--&gt;类
+
+* 重点：
+    类描述的是对象的共同特征。
+    共同特征例如：身高特征
+    这个身高特征在访问的时候，必须先创建对象，通过对象去访问这个特征。
+    因为这个特征具体的某个对象上之后，值不同。有的对象身高1.80，有的
+    对象身高2.80。</code></pre><p>  （4）* 一个类主要描述什么信息呢？</p>
+</li>
+</ul>
+<p>一个类主要描述的是 状态 + 动作。<br>            状态信息：名字、身高、性别、年龄<br>            动作信息：吃、唱歌、跳舞、学习</p>
+<pre><code>        状态--&gt; 一个类的属性
+        动作--&gt; 一个类的方法
+* 
+        类{
+            属性; //描述对象的状态信息
+            方法; //描述对象的动作信息
+        }</code></pre><p>注意：<br>                状态和动作当具体到某个对象上之后，发现最终的结果可能不一样。<br>                对象和对象之间有共同特征，但是具体到对象之后有数据的差异。</p>
+<p>（5）    * 类的定义【从这里开始编写代码】<br>        语法结构：<br>            [修饰符列表] class 类名{<br>                属性;<br>                方法;<br>            }</p>
+<pre><code>学生类，描述所有学生对象的共同特征：
+    学生对象有哪些状态信息：
+        * 学号【int】
+        * 名字【String】
+        * 性别【boolean】
+        * 年龄【int】【年龄是一个属性，年龄是一个数据，是数据就应该有数据类型】
+        * 住址【String】
+        .....
+
+    学生对象有哪些动作信息：
+        * 吃饭
+        * 睡觉
+        * 学习
+        * 玩
+        * 唱歌
+        * 跳舞
+        ....
+
+重点：属性通常是采用一个变量的形式来完成定义的。
+    int no;
+    int age;
+    String name;
+    String address;
+    boolean sex;</code></pre><hr>
+<pre><code>* java语言中包括两种数据类型：
+
+    - 基本数据类型
+        byte
+        short
+        int
+        long
+        float
+        double
+        boolean
+        char
+
+    - 引用数据类型
+        String.class SUN提供的
+        System.class SUN提供的
+
+        Student.class 程序员自定义的
+        User.class 程序员自定义的
+        Product.class 程序员自定义的
+        Customer.class 程序员自定义的
+        ......
+
+    - java语言中所有的class都属于引用数据类型。</code></pre><hr>
+<p>在类体中，方法体之外定义的变量被称为“成员变量”，成员变量没有赋值，系统赋默认值：一切向0看齐。</p>
+<ul>
+<li>数据类型              默认值<br>byte,short,int,long     0<br>float,double           0.0<br>boolean               false<br>char                 \u0000<br>引用数据类型          null  空值</li>
+</ul>
+<hr>
+<p>5.对象的创建和使用<br>1、对象又被称为实例，实例变量又被称为对象变量。<br>2、实例化对象的语法：new　类名（）；<br>——new是java语言当中的一个运算符，作用是创建对象，在ＪＶＭ堆内存当中开辟新的内存空间【实例变量存储在堆内存】。<br>——方法区内存：在类加载时，ｃｌａｓｓ字节码代码片段被加载到该内存空间当中<br>堆内存：new的对象在堆内存中存储<br>栈内存（局部变量）：方法代码片段执行的时候，会给该方法分配内存空间，在栈内存中压栈。<br>eg. Student s= new Student();<br>Student是一个引用数据类型，s是一个局部变量【在栈内存中存储】，new Student（）是一个学生对象。<br>什么是对象？new运算符在堆内存中开辟的内存空间称为对象。<br>什么是引用？引用是一个保存了另一个java对象的内存地址的变量，包括局部变量和成员变量。<br>访问实例变量得语法格式：<br>（1）读取数据/get：引用.变量名<br>（2）修改数据/set：引用.变量名=值<br>局部变量在栈内存中存储<br>成员变量中的实例变量在堆内存的java对象内部存储，实例变量是一个对象一份，100个对象100份.<br> u.addr=new Address();<br>System.out.println(u.name+” city: “+u.addr.city);</p>
+<hr>
+<p>6.变量分类：<br>—局部变量【方法体内声明】—栈内存<br>—成员变量【方法体外申明】<br>*实例变量【前边修饰符没有static】—堆内存<br>*静态变量【前边修饰符中有static】—方法区内存<br>数据→方法区内存→栈内存执行，变化最频繁→堆内存垃圾回收</p>
+<p>—垃圾回收器【自动垃圾回收机制、GC机制】什么时候会考虑将某个java对象的内存回收？<br>*当堆内存当中的java对象成为垃圾数据的时候，会被垃圾回收器回收。<br>—什么时候堆内存的java对象会变成垃圾呢？<br>*没有更多的引用指向它的时候。<br>PS：这个对象无法被访问，因为访问对象只能通过引用的方式访问。</p>
+<hr>
+<p>7.空指针异常：java.lang.NullPointerException<br>空引用访问“实例”相关的数据一定会出现空指针异常。<br>eg.   Customer c=new Customer();<br>      System.out.println(c.id);<br>      c=null;<br>      System.out.println(c.id); //java.lang.NullPointerException<br>“实例”相关的数据表示：这个数据访问的时候必须有对象的参与。这种数据就是实例相关的数据。<br>PS：每一个类中都可以编写主方法，但是一般情况下，一个系统只有一个入口，所以主方法一般写一个。<br>PS：通过赋值运算符“=”，使两个引用变量之间产生链接，从而使其连接到同一地址。</p>
+<hr>
+<p>8.面对对象的封装性<br>myeclipse快捷键：ctrl+shift+F 格式化<br>—封装的好处：<br>（1）真正的“独立体”，对外提供简单的操作入口，封装内部复杂的实现机制，形成真正的“对象”<br>（2）封装意味着以后的程序可以重复使用，并且这个事物应该适应性比较强，在任何场所都可以使用。<br>（3）提高安全性【安全级别高】<br>—封装的步骤<br>（1）所有属性私有化，使用private关键字进行修饰，private表示私有的，修饰的所有数据只能在本类中访问，在外部程序中不能直接访问。 eg.private int age;<br>（2）对外提供简单的操作入口，即外部程序必须通过操作入口进行访问；<br>——对外提供两个公开的方法，分别是set方法（修改）和get方法（读取）<br>①set方法的命名规范：<br>public void setAge(int a){<br>   age=a;<br>}<br>安全过滤：在set方法编写业务逻辑代码进行安全控制<br>②get方法的命名规范：<br>pubilc int getAge(){<br>   return age;<br>}<br>PS:<br>——setter 和getter方法没有static关键字：<br>*有static关键字修饰的方法调用：类名.方法名（实参）;<br>*没有static关键字修饰的方法调用：引用.方法名（实参）。  eg.  c.setId(100)  、  c.getId()</p>
+<p>———————————————————————————-2019.12.19-2019.12.21学习类与对象，“java-面对对象”基础知识学习完毕</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/19/6%20java%E5%9F%BA%E7%A1%80-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/" data-id="ckcwt7xma000538vm0m1f8bmg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/12/22/7-%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E4%B8%8E%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          7-构造方法与参数传递
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/12/10/5%20java%E5%9F%BA%E7%A1%80-%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">java基础-方法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/22/%E6%B5%8B%E8%AF%95/">测试</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/22/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/22/7-%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E4%B8%8E%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/">7-构造方法与参数传递</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/19/6%20java%E5%9F%BA%E7%A1%80-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/">java基础-类与对象</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/10/5%20java%E5%9F%BA%E7%A1%80-%E6%96%B9%E6%B3%95/">java基础-方法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
